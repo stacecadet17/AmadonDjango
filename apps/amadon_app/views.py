@@ -9,6 +9,7 @@ def index(request):
     return render(request, 'amadon_app/index.html')
 
 def buy(request):
+    print "buy"
     if 'total_items' not in request.session:
         request.session['total_items'] = 0
         request.session['total_charge'] = 0
@@ -42,8 +43,6 @@ def checkout(request):
     return render(request, 'amadon_app/checkout.html')
 
 def clear(request):
-    del request.session['total_charge']
-    del request.session['item']
-    del request.session['total_items']
-    del request.session['charge']
+    print "Clear"
+    request.session.clear()
     return redirect('/')

@@ -9,7 +9,7 @@
       <p>You have purchased a {{ request.session.item }}!</p>
       <p>We have charged your credit card for {{ request.session.charge}}.</p>
       <p>You have ordered {{ request.session.total_items}}, and have spent a total of {{ request.session.total_charge }}</p>
-      <form action='/buy' method='post'>
+      <form action='/clear' method='post'>
           {% csrf_token %}
         <input type='submit' value='empty cart'>
       </form>

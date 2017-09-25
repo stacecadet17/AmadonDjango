@@ -5,5 +5,5 @@ urlpatterns = [
     url(r'^$', views.index),
     url(r'buy$', views.buy),
     url(r'checkout$', views.checkout),
-    url(r'^$', views.clear),
+    url(r'^clear', views.clear),
 ]
